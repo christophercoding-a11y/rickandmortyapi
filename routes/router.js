@@ -8,10 +8,13 @@ router.use(express.static('public'))
 const characterRoutes = require('./api/characterRoutes')
 router.use('/characters', characterRoutes)
 
+const episodeRoutes = require('./api/episodeRoutes')
+router.use('/episodes', episodeRoutes)
+
 router.get('/', (req, res)=> {
     res.render('pages/home', {
         title: 'Rick and Morty',
-        name: 'Cartoon'
+        name: 'My Rick and Morty Website'
     })
 })
 
