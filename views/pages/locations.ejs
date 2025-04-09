@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="locationMain">
+    <div class="container">
+        <div class="row row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+            <% data.forEach(location => { %>
+                <div class="col">
+                    <div class="card location-card">
+                        <header class="card-header">
+                            <h2 class="card-title">
+                                <%= location.title %>
+                            </h2>
+                        </header>
+                        <div class="card-body">
+                            <p class="card-text"><%= location.name %></p>
+                            <p class="card-text"><%= location.planet %></p>
+                            <p class="card-text"><%= location.dimension %></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/<%= path %>/<%= location.id %>" class="card-footer link">view more</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>

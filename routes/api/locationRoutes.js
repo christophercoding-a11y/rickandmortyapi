@@ -15,7 +15,8 @@ router.get('/', (req, res)=> {
         res.render('pages/locations',{
             title: 'Locations',
             name: 'Locations',
-            data: resp.data
+            data: resp.data,
+            path: 'locations'
         })
     })
 })
@@ -54,6 +55,7 @@ router.get('/:id', (req, res)=> {
         })
     })
 })
+
 
 module.exports = router
 

@@ -15,7 +15,7 @@ router.get('/', (req, res)=> {
     axios.get(url).then(response => {
         res.render('pages/characters', {
             title: 'Characters',
-            name: 'rick and morty',
+            name: 'Characters',
             data: response.data,
             path: 'characters'
         })

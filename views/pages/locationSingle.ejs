@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="locationSingleMain">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navigation">
+                    <ul class="pagination">
+                        <% if (data.id > 1) { %>
+                            <li class="page-item">
+                                <a href="/<%= path %>/<%= data.id - 1 %>" class="page-link">Previous</a>
+                            </li>
+                        <% } %>
+
+                        <% if (data.id < count) { %>
+                            <li class="page-item">
+                                <a href="/<%= path %>/<%= data.id + 1 %>" class="page-link">Next</a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </nav>
+                <div class="col">
+                    <div class="card location-card">
+                        <header class="card-header">
+                            <h2 class="card-title">
+                                <%= data.title %>
+                            </h2>
+                        </header>
+                        <div class="card-body">
+                            <p class="card-text"><%= data.name %></p>
+                            <p class="card-text"><%= data.planet %></p>
+                            <p class="card-text"><%= data.dimension %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>
