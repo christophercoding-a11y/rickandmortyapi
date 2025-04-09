@@ -11,6 +11,9 @@ router.use('/characters', characterRoutes)
 const episodeRoutes = require('./api/episodeRoutes')
 router.use('/episodes', episodeRoutes)
 
+const locationRoutes = require('./api/locationRoutes')
+router.use('/locations', locationRoutes)
+
 router.get('/', (req, res)=> {
     res.render('pages/home', {
         title: 'Rick and Morty',
