@@ -34,7 +34,8 @@ router.get('/type/:type', (req, res) => {
         res.render('pages/locations', {
             title: type,
             name: `${type} locations`,
-            data: typeArr
+            data: typeArr,
+            path: `locations/type/${type}`
         })
     })
 })
